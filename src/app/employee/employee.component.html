@@ -1,0 +1,44 @@
+<!--<style>
+  table {
+    color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    border-collapse: collapse;
+    font-style: italic;
+  }
+
+  td {
+    border: solid black;
+  }
+
+</style>
+  -->
+<table>
+  <thead>
+    <tr>
+      <th attr.colspan="{{columnspan}}">Employee Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First Name</td>
+      <td>{{firstname}}</td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td>{{lastname}}</td>
+    </tr>
+    <tr *ngIf="showDetails">
+      <td>Gender</td>
+      <td>{{gender}}</td>
+    </tr>
+    <tr *ngIf="showDetails">
+      <td>Age</td>
+      <td>{{age}}</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<button (click)="toggleDetails()">
+  {{showDetails? 'Hide':'Show'}} Details
+</button>
